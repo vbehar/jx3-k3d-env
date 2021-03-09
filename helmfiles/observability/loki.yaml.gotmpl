@@ -1,0 +1,20 @@
+# https://github.com/grafana/helm-charts/blob/main/charts/loki/values.yaml
+
+#persistence:
+#  enabled: true
+#  size: 100Gi
+
+config:
+  table_manager:
+    retention_deletes_enabled: true
+  ruler:
+    storage:
+      type: local
+      local:
+        directory: /rules
+    rule_path: /tmp/scratch
+    alertmanager_url: http://prometheus-alertmanager.observability
+    ring:
+      kvstore:
+        store: inmemory
+    enable_api: true

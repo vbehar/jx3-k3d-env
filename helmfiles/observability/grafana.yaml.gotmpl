@@ -1,0 +1,48 @@
+# https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+
+#image:
+#  tag: 7.5.0-beta1
+
+plugins:
+  - grafana-piechart-panel 1.6.1
+  - briangann-datatable-panel 1.0.3
+
+grafana.ini:
+  auth.anonymous:
+    enabled: true
+    org_role: Viewer
+  users:
+    # https://grafana.com/docs/grafana/latest/administration/configuration/#viewers_can_edit
+    viewers_can_edit: true
+  analytics:
+    reporting_enabled: false
+    check_for_updates: false
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - name: Loki
+      uid: loki
+      type: loki
+      access: proxy
+      url: http://loki.observability:3100
+      version: 1
+    - name: Prometheus
+      uid: prometheus
+      type: prometheus
+      access: proxy
+      url: http://prometheus-server.observability
+      httpMethod: POST
+      version: 1
+
+sidecar:
+  dashboards:
+    enabled: true
+    label: jenkins-x.io/grafana-dashboard
+    folder: /tmp/dashboards
+    provider:
+      allowUiUpdates: true
+
+testFramework:
+  enabled: false
