@@ -1,9 +1,21 @@
 # https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml
 
 server:
+  enabled: true
+  persistentVolume:
+    enabled: true
+    size: 1Gi
+
+alertmanager:
+  enabled: true
   persistentVolume:
     enabled: false
 
-alertmanager:
-  persistentVolume:
-    enabled: false
+kubeStateMetrics:
+  enabled: true
+
+nodeExporter:
+  enabled: true
+
+pushgateway:
+  enabled: false
