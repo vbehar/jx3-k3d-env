@@ -77,5 +77,14 @@ spec:
         - name: config
           secret:
             secretName: loki
-        - name: storage
-          emptyDir: {}
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+        annotations: {}
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: "1Gi"
+        storageClassName:

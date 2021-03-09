@@ -90,4 +90,5 @@ spec:
           configMap:
             name: prometheus-server
         - name: storage-volume
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: prometheus-server
