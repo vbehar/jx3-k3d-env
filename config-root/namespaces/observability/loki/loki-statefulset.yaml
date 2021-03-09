@@ -28,7 +28,7 @@ spec:
         name: loki
         release: loki
       annotations:
-        checksum/config: 4dbae398e2915656d1fee8e044ab3a7e45dbdefdaec9cb5f8cbb2cacf8aa7ed7
+        checksum/config: c746ce3cdd5f73e95643d8be5c9e0cde2ea79c10334a4ec0d2b9960a9a30dc87
         prometheus.io/port: http-metrics
         prometheus.io/scrape: "true"
     spec:
