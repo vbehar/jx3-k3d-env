@@ -3,7 +3,7 @@ environments:
   default:
     values:
     - jx-values.yaml
-namespace: jx
+namespace: observability
 repositories:
 - name: grafana
   url: https://grafana.github.io/helm-charts
@@ -15,28 +15,28 @@ releases:
   name: loki
   values:
   #- ../../versionStream/charts/jenkins-x/jxboot-helmfile-resources/values.yaml.gotmpl
-  - loki.yaml.gotmpl
+  - loki.yaml
   - jx-values.yaml
 - chart: grafana/promtail
   version: 3.2.0
   name: promtail
   values:
   #- ../../versionStream/charts/jx3/jenkins-x-crds/values.yaml.gotmpl
-  - promtail.yaml.gotmpl
+  - promtail.yaml
   - jx-values.yaml
 - chart: grafana/grafana
   version: 6.4.8
   name: grafana
   values:
   #- ../../versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
-  - grafana.yaml.gotmpl
+  - grafana.yaml
   - jx-values.yaml
 - chart: prometheus-community/prometheus
   version: 13.4.0
   name: prometheus
   values:
   #- ../../versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
-  - prometheus.yaml.gotmpl
+  - prometheus.yaml
   - jx-values.yaml
-templates: {}
-renderedvalues: {}
+#templates: {}
+#renderedvalues: {}
