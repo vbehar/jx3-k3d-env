@@ -11,32 +11,28 @@ repositories:
   url: https://prometheus-community.github.io/helm-charts
 releases:
 - chart: grafana/loki
-  version: 2.3.0
+  #version: 2.3.0
   name: loki
   values:
-  #- ../../versionStream/charts/jenkins-x/jxboot-helmfile-resources/values.yaml.gotmpl
-  - loki.yaml
+  - ../../versionStream/charts/grafana/loki/values.yaml
   - jx-values.yaml
 - chart: grafana/promtail
-  version: 3.2.0
+  #version: 3.2.0
   name: promtail
   values:
-  #- ../../versionStream/charts/jx3/jenkins-x-crds/values.yaml.gotmpl
-  - promtail.yaml
+  - ../../versionStream/charts/grafana/promtail/values.yaml
   - jx-values.yaml
 - chart: grafana/grafana
-  version: 6.4.8
+  #version: 6.4.8
   name: grafana
   values:
-  #- ../../versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
-  - grafana.yaml
+  - ../../versionStream/charts/grafana/grafana/values.yaml
   - jx-values.yaml
 - chart: prometheus-community/prometheus
-  version: 13.4.0
+  #version: 13.4.0
   name: prometheus
   values:
-  #- ../../versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
-  - prometheus.yaml
+  - ../../versionStream/charts/prometheus-community/prometheus/values.yaml
   - jx-values.yaml
-#templates: {}
-#renderedvalues: {}
+templates: {}
+renderedvalues: {}
