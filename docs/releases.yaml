@@ -196,7 +196,7 @@
     - https://github.com/kubernetes/ingress-nginx
     type: application
     version: 3.12.0
-- namespace: observability
+- namespace: jx-observability
   path: helmfiles/observability/helmfile.yaml
   releases:
   - apiVersion: v1
@@ -211,7 +211,7 @@
     name: loki
     repositoryName: grafana
     repositoryUrl: https://grafana.github.io/helm-charts
-    resourcePath: config-root/namespaces/observability/loki
+    resourcePath: config-root/namespaces/jx-observability/loki
     sources:
     - https://github.com/grafana/loki
     version: 2.3.0
@@ -227,7 +227,7 @@
     name: promtail
     repositoryName: grafana
     repositoryUrl: https://grafana.github.io/helm-charts
-    resourcePath: config-root/namespaces/observability/promtail
+    resourcePath: config-root/namespaces/jx-observability/promtail
     sources:
     - https://github.com/grafana/loki
     - https://grafana.com/oss/loki/
@@ -254,7 +254,7 @@
     name: grafana
     repositoryName: grafana
     repositoryUrl: https://grafana.github.io/helm-charts
-    resourcePath: config-root/namespaces/observability/grafana
+    resourcePath: config-root/namespaces/jx-observability/grafana
     sources:
     - https://github.com/grafana/grafana
     type: application
@@ -283,7 +283,7 @@
     name: prometheus
     repositoryName: prometheus-community
     repositoryUrl: https://prometheus-community.github.io/helm-charts
-    resourcePath: config-root/namespaces/observability/prometheus
+    resourcePath: config-root/namespaces/jx-observability/prometheus
     sources:
     - https://github.com/prometheus/alertmanager
     - https://github.com/prometheus/prometheus

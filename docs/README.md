@@ -95,7 +95,7 @@
 	      <td><a href='https://github.com/kubernetes/ingress-nginx'>source</a></td>
 	    </tr>
     <tr>
-		      <td colspan='4'><h3>observability</h3></td>
+		      <td colspan='4'><h3>jx-observability</h3></td>
 		    </tr>
 	    <tr>
 	      <td><a href='https://grafana.com/loki' title='Loki: like Prometheus, but for logs.'> <img src='https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png' width='24px' height='24px'> loki </a></td>
