@@ -40,7 +40,7 @@ jxRequirements:
     domain: change.me
     externalDNS: false
     kind: ingress
-    namespaceSubDomain: -observability.
+    namespaceSubDomain: -jx-observability.
     tls:
       email: ""
       enabled: false
