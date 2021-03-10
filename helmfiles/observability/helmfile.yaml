@@ -3,7 +3,7 @@ environments:
   default:
     values:
     - jx-values.yaml
-namespace: observability
+namespace: jx-observability
 repositories:
 - name: grafana
   url: https://grafana.github.io/helm-charts

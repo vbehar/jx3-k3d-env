@@ -26,13 +26,13 @@ datasources:
       uid: loki
       type: loki
       access: proxy
-      url: http://loki.observability:3100
+      url: http://loki.jx-observability:3100
       version: 1
     - name: Prometheus
       uid: prometheus
       type: prometheus
       access: proxy
-      url: http://prometheus-server.observability
+      url: http://prometheus-server.jx-observability
       httpMethod: POST
       version: 1
 
