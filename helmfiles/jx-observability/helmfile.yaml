@@ -26,7 +26,7 @@ releases:
   version: 6.4.8
   name: grafana
   values:
-  - ../../versionStream/charts/grafana/grafana/values.yaml
+  - ../../versionStream/charts/grafana/grafana/values.yaml.gotmpl
   - jx-values.yaml
 - chart: prometheus-community/prometheus
   version: 13.4.0
