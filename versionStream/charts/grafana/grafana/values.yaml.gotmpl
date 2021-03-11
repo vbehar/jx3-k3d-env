@@ -44,10 +44,6 @@ ingress:
   hosts:
     - grafana{{ .Values.jxRequirements.ingress.namespaceSubDomain }}{{ .Values.jxRequirements.ingress.domain }}
 
-serviceAccount:
-  annotations:
-    # iam.gke.io/gcp-service-account: {{ .Values.jxRequirements.cluster.clusterName }}-grafana@{{ .Values.jxRequirements.cluster.project }}.iam.gserviceaccount.com
-
 persistence:
   enabled: false
 
