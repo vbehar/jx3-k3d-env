@@ -75,13 +75,13 @@
 		    </tr>
 	    <tr>
 	      <td><a href='https://grafana.com/loki' title='Loki: like Prometheus, but for logs.'> <img src='https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png' width='24px' height='24px'> loki </a></td>
-	      <td>2.3.0</td>
+	      <td>2.5.0</td>
 	      <td></td>
 	      <td><a href='https://grafana.com/loki'>source</a></td>
 	    </tr>
     <tr>
 	      <td><a href='https://grafana.com/loki' title='Promtail is an agent which ships the contents of local logs to a Loki instance'> <img src='https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png' width='24px' height='24px'> promtail </a></td>
-	      <td>3.2.0</td>
+	      <td>3.5.0</td>
 	      <td></td>
 	      <td><a href='https://grafana.com/loki'>source</a></td>
 	    </tr>
